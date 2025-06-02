@@ -3,7 +3,7 @@ name: Deploy to Vercel
 on:
   push:
     branches:
-      - main  # o 'master' si tu rama principal se llama así
+      - main
 
 jobs:
   deploy:
@@ -15,4 +15,7 @@ jobs:
       - name: Install Vercel CLI
         run: npm install -g vercel
 
-      
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: vercel --prod --token $VERCEL_TOKEN --confirm
