@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #0f0f1a;
+    color: white;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.content {
+    max-width: 1200px;
+    width: 100%;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(90deg, #00ffff, #ff00ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.definition {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.highlight {
+    color: #00ffff;
+    font-weight: bold;
+}
+
+.benefits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+}
+
+.benefit-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff00ff;
+}
+
+.benefit-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #00ffff;
+}
+
+.optimizes-section {
+    margin-top: 5rem;
+}
+
+.optimizes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.optimize-item {
+    background: rgba(0, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 1px solid #00ffff;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .definition {
+        font-size: 1.5rem;
+    }
+    .benefits-container {
+        grid-template-columns: 1fr;
+    }
+}
